@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 3998dcce8a7287440b1950ab3986df1d
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - rope: {fileID: 919132149155446097, guid: 7f9d0fec4d1ebe445a8bc6a8a1df0521, type: 3}
+  - RopeStart: {instanceID: 0}
+  - RopeEnd: {instanceID: 0}
+  - GuideText: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
