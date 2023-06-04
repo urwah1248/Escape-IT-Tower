@@ -23,7 +23,7 @@ public class RopeAttachment : MonoBehaviour
             
             if (Input.GetKeyUp(KeyCode.G))
             {
-                DettachRope();
+                // DettachRope();
             }
         }
 
@@ -43,14 +43,16 @@ public class RopeAttachment : MonoBehaviour
             }
         }
 
-        if(RopeEnd.transform != null)
-        {
-            float distance = Vector3.Distance(transform.position, RopeEnd.transform.position);
-            if (FindObjectOfType<PlayerMovementRope>().Attached == true)
+        if(RopeEnd != null){
+            if(RopeEnd.transform != null)
             {
-                if (distance < 0.55)
+                float distance = Vector3.Distance(transform.position, RopeEnd.transform.position);
+                if (FindObjectOfType<PlayerMovementRope>().Attached == true)
                 {
-                    DettachRope();
+                    if (distance < 0.55)
+                    {
+                        // DettachRope();
+                    }
                 }
             }
         }
