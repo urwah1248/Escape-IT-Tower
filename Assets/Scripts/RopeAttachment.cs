@@ -51,7 +51,7 @@ public class RopeAttachment : MonoBehaviour
                 {
                     if (distance < 0.55)
                     {
-                        // DettachRope();
+                        DettachRope();
                     }
                 }
             }
@@ -80,7 +80,7 @@ public class RopeAttachment : MonoBehaviour
     void DettachRope()
     {
         GameObject Rope = FindObjectOfType<TriggerCallback>().Fence.gameObject.GetComponent<FenceScript>().AttachedRope;
-        Destroy(Rope);
+        //Destroy(Rope);
         FindObjectOfType<TriggerCallback>().Fence.gameObject.GetComponent<FenceScript>().RopeAttached = false;
         FindObjectOfType<TriggerCallback>().Fence.gameObject.GetComponent<FenceScript>().AttachedRope = null;
         FindObjectOfType<PlayerBehaviour>().NumberOfRopes += 1;

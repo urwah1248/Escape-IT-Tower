@@ -112,6 +112,7 @@ namespace StarterAssets
 
 		private void Update()
 		{
+            if (FindObjectOfType<PlayerMovementRope>().Attached) { return; }
 			JumpAndGravity();
 			GroundedCheck();
 			Move();

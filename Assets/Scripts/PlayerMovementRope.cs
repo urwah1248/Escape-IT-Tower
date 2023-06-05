@@ -44,7 +44,8 @@ public class PlayerMovementRope : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftShift))
         {
             float distance = Vector3.Distance(transform.position, RopeEnd.transform.position);
-            if (distance < 0.52) { return; }
+            if (distance < 0.52) { print("should stop");return; }
+            Debug.Log(distance);
             transform.position = new Vector3(transform.position.x, transform.position.y - fallSpeed, transform.position.z);
         }
         
