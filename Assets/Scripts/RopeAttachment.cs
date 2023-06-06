@@ -5,7 +5,8 @@ public class RopeAttachment : MonoBehaviour
 {
     [SerializeField] GameObject rope; 
     public GameObject RopeStart; 
-    public GameObject RopeEnd; 
+    public GameObject RopeEnd;
+    public GameObject ropeModel;
     public bool collided;
 
     [SerializeField] float ropeMultiplier;
@@ -34,7 +35,7 @@ public class RopeAttachment : MonoBehaviour
             if (RopeAttached)
             {
                 GuideText.gameObject.SetActive(true);
-                GuideText.text = "Press G to dettach rope";
+                GuideText.text = "Press Shift to go Down.";
             }
             if (!RopeAttached)
             {
@@ -62,6 +63,7 @@ public class RopeAttachment : MonoBehaviour
     {
         if (FindObjectOfType<PlayerBehaviour>().NumberOfRopes <= 0) { return; }
         if (FindObjectOfType<TriggerCallback>().Fence.GetComponent<FenceScript>().RopeAttached == true) { return; }
+        ropeModel.SetActive(false);
         FindObjectOfType<PlayerBehaviour>().NumberOfRopes -= 1;
         FindObjectOfType<PlayerBehaviour>().numberOfRopes();
         FindObjectOfType<TriggerCallback>().Fence.gameObject.GetComponent<FenceScript>().RopeAttached = true;

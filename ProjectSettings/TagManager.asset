@@ -9,6 +9,8 @@ TagManager:
   - Rope
   - Glass
   - Axe
+  - FireExtinguisher
+  - Fire
   layers:
   - Default
   - TransparentFX
