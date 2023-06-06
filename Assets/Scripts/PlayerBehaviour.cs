@@ -114,6 +114,7 @@ public class PlayerBehaviour : MonoBehaviour
             Destroy(fire);
             ExtinguisherPickedup = false;
             fireExtinguisherModel.SetActive(false);
+        RopesText.text = "Well done, Go Ahead now.";
         }
     }
 
