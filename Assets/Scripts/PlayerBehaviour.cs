@@ -74,7 +74,7 @@ public class PlayerBehaviour : MonoBehaviour
 
     public void numberOfRopes()
     {
-        RopesText.text = "Number Of Ropes = " + NumberOfRopes;
+        RopesText.text = "Excellent, go ahead.";
     }
 
     void ItemPickup(Collider item)
