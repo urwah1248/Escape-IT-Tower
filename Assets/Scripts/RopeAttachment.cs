@@ -7,6 +7,7 @@ public class RopeAttachment : MonoBehaviour
     public GameObject RopeStart; 
     public GameObject RopeEnd;
     public GameObject ropeModel;
+    
     public bool collided;
 
     [SerializeField] float ropeMultiplier;
@@ -14,7 +15,12 @@ public class RopeAttachment : MonoBehaviour
     [SerializeField] Text GuideText;
 
     private void Update()
-    {
+    { 
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            DettachRope();
+        }
+
         if (collided)
         {
             if (Input.GetKeyUp(KeyCode.F))
@@ -37,10 +43,14 @@ public class RopeAttachment : MonoBehaviour
                 GuideText.gameObject.SetActive(true);
                 GuideText.text = "Press Shift to go Down.";
             }
-            if (!RopeAttached)
+            if (!RopeAttached && FindObjectOfType<PlayerBehaviour>().NumberOfRopes > 0)
             {
                 GuideText.gameObject.SetActive(true);
                 GuideText.text = "Press F to attach rope";
+            }
+            if(!RopeAttached && FindObjectOfType<PlayerBehaviour>().NumberOfRopes <= 0){
+                GuideText.gameObject.SetActive(true);
+                GuideText.text = "You can use a rope to get down.";
             }
         }
 
@@ -65,7 +75,8 @@ public class RopeAttachment : MonoBehaviour
         if (FindObjectOfType<TriggerCallback>().Fence.GetComponent<FenceScript>().RopeAttached == true) { return; }
         ropeModel.SetActive(false);
         FindObjectOfType<PlayerBehaviour>().NumberOfRopes -= 1;
-        FindObjectOfType<PlayerBehaviour>().numberOfRopes();
+        FindObjectOfType<PlayerBehaviour>().attachRopeText();
+        // FindObjectOfType<PlayerBehaviour>().numberOfRopes();
         FindObjectOfType<TriggerCallback>().Fence.gameObject.GetComponent<FenceScript>().RopeAttached = true;
         GameObject Rope = Instantiate(rope);
         FindObjectOfType<TriggerCallback>().Fence.gameObject.GetComponent<FenceScript>().AttachedRope = Rope;
@@ -85,10 +96,11 @@ public class RopeAttachment : MonoBehaviour
         //Destroy(Rope);
         FindObjectOfType<TriggerCallback>().Fence.gameObject.GetComponent<FenceScript>().RopeAttached = false;
         FindObjectOfType<TriggerCallback>().Fence.gameObject.GetComponent<FenceScript>().AttachedRope = null;
-        FindObjectOfType<PlayerBehaviour>().NumberOfRopes += 1;
+        // FindObjectOfType<PlayerBehaviour>().NumberOfRopes += 1;
         FindObjectOfType<PlayerBehaviour>().numberOfRopes();
         RopeEnd = null;
         RopeStart = null;
         FindObjectOfType<PlayerMovementRope>().Attached = false;
+
     }
 }

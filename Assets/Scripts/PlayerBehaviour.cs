@@ -64,6 +64,12 @@ public class PlayerBehaviour : MonoBehaviour
                 PickupText.text = "Need to put out this fire.";
             }
         }
+
+        if(other.tag == "Glass")
+        {
+            PickupText.gameObject.SetActive(true);
+            PickupText.text = "I could break this glass with something.";
+        }
     }
 
     private void OnTriggerEnter(Collider collider){
@@ -74,7 +80,11 @@ public class PlayerBehaviour : MonoBehaviour
 
     public void numberOfRopes()
     {
-        RopesText.text = "Excellent, go ahead.";
+        RopesText.text = "Well done, now find a way to get out of the building.";
+    }
+    public void attachRopeText()
+    {
+        RopesText.text = "Clever, now get down using the rope.";
     }
 
     void ItemPickup(Collider item)
@@ -114,7 +124,7 @@ public class PlayerBehaviour : MonoBehaviour
             Destroy(fire);
             ExtinguisherPickedup = false;
             fireExtinguisherModel.SetActive(false);
-        RopesText.text = "Well done, Go Ahead now.";
+        RopesText.text = "Good Job, you need to go down further.";
         }
     }
 

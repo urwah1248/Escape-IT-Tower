@@ -228,6 +228,50 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5114467526951811514, guid: cb9e45c332819494b8dfc937910a3436, type: 3}
+      propertyPath: m_SelectedEdges.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5114467526951811514, guid: cb9e45c332819494b8dfc937910a3436, type: 3}
+      propertyPath: m_SelectedFaces.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5114467526951811514, guid: cb9e45c332819494b8dfc937910a3436, type: 3}
+      propertyPath: m_Tangents.Array.data[16].x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5114467526951811514, guid: cb9e45c332819494b8dfc937910a3436, type: 3}
+      propertyPath: m_Tangents.Array.data[16].z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5114467526951811514, guid: cb9e45c332819494b8dfc937910a3436, type: 3}
+      propertyPath: m_Tangents.Array.data[17].x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5114467526951811514, guid: cb9e45c332819494b8dfc937910a3436, type: 3}
+      propertyPath: m_Tangents.Array.data[17].z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5114467526951811514, guid: cb9e45c332819494b8dfc937910a3436, type: 3}
+      propertyPath: m_Tangents.Array.data[18].x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5114467526951811514, guid: cb9e45c332819494b8dfc937910a3436, type: 3}
+      propertyPath: m_Tangents.Array.data[18].z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5114467526951811514, guid: cb9e45c332819494b8dfc937910a3436, type: 3}
+      propertyPath: m_Tangents.Array.data[19].x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5114467526951811514, guid: cb9e45c332819494b8dfc937910a3436, type: 3}
+      propertyPath: m_Tangents.Array.data[19].z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5114467526951811514, guid: cb9e45c332819494b8dfc937910a3436, type: 3}
+      propertyPath: m_SelectedVertices.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5114467527397451616, guid: cb9e45c332819494b8dfc937910a3436, type: 3}
       propertyPath: m_Mesh
       value: 

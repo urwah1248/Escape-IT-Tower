@@ -32,6 +32,7 @@ public class Attack : MonoBehaviour
         {
             if (PlayBreakingAnimation)
             {
+                FindObjectOfType<TriggerCallback>().Glass.GetComponent<Collider>().enabled = false;
                 FindObjectOfType<TriggerCallback>().Glass.GetComponent<MeshDestroyScript>().DestroyMesh();
             }
             else 
